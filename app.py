@@ -82,7 +82,8 @@ with tab2:
             st.markdown(f"**Generated on:** `{export_datetime}`  ")
             st.markdown("This PDF is generated from the current chart, including custom header info. Future versions may include headers, metadata, and page numbers.")
 
-            st.download_button("Download Chart as PDF", chart_pdf.getvalue(), file_name=f"filtered_tag_chart_{user_id_display}.pdf", mime="application/pdf"), file_name=)
+            st.download_button("Download Chart as PDF", chart_pdf.getvalue(), file_name=f"filtered_tag_chart_{user_id_display}.pdf", mime="application/pdf")
+
         csv = filtered_summary.to_csv(index=False).encode('utf-8')
         st.download_button("Download Summary as CSV", csv, file_name="tag_summary_by_file.csv", mime="text/csv")
 
